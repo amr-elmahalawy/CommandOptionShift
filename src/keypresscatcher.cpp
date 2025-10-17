@@ -114,10 +114,10 @@ void KeyPressCatcher::sendSystemDefaultChangeLanguageShortcut()
     CGEventRef spaceDown = CGEventCreateKeyboardEvent(src, 0x31, true);
     CGEventRef spaceUp = CGEventCreateKeyboardEvent(src, 0x31, false);
 
-    CGEventSetFlags(spaceDown, kCGEventFlagMaskAlternate);
-    CGEventSetFlags(spaceUp, kCGEventFlagMaskAlternate);
-    CGEventSetFlags(spaceDown, kCGEventFlagMaskControl);
-    CGEventSetFlags(spaceUp, kCGEventFlagMaskControl);
+    //CGEventSetFlags(spaceDown, kCGEventFlagMaskAlternate);
+    //CGEventSetFlags(spaceUp, kCGEventFlagMaskAlternate);
+    CGEventSetFlags(spaceDown, kCGEventFlagMaskControl | kCGEventFlagMaskAlternate);
+    CGEventSetFlags(spaceUp, kCGEventFlagMaskControl | kCGEventFlagMaskAlternate);
 
     CGEventTapLocation loc = kCGHIDEventTap;
 
