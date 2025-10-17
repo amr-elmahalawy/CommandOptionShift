@@ -1,1 +1,7 @@
 .DS_Store
+
+.qmake.stash
+*.o
+
+Makefile
+qrc_app_resources.*
